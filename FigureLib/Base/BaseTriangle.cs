@@ -27,7 +27,8 @@ namespace FigureLib.Base
         public override double GetArea()
         {
             double halfp = GetPerimeter() / 2;
-            return Math.Sqrt(halfp * (halfp - Sides[0]) * (halfp - Sides[1]) * (halfp - Sides[2]));
+            double[] s = Sides;
+            return Math.Sqrt(halfp * (halfp - s[0]) * (halfp - s[1]) * (halfp - s[2]));
         }
 
         public override double GetPerimeter()
